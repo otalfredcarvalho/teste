@@ -3,51 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Treino de Site - Estilo MG Recicla</title>
     <style>
-        /* Aqui começa o CSS - A "maquiagem" do site */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+        /* RESET BÁSICO */
+        * { margin: 0; padding: 0; box-box-sizing: border-box; font-family: 'Arial', sans-serif; }
+
+        /* CABEÇALHO */
+        header {
+            background: #fff;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { font-weight: bold; font-size: 24px; color: #2d5a27; }
+
+        /* SEÇÃO PRINCIPAL (HERO) */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070'); /* TROQUE ESTE LINK PELA SUA FOTO */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .hero p { font-size: 20px; max-width: 600px; margin-bottom: 30px; }
+
+        /* BOTÃO */
+        .btn-contato {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* SEÇÃO DE SERVIÇOS (CARDS) */
+        .servicos { padding: 50px 10%; background: #f9f9f9; text-align: center; }
+        .grid-servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
         .card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 400px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-        h1 { color: #2c3e50; }
-        p { line-height: 1.6; }
-        .botao {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .botao:hover { background-color: #0056b3; }
+        .card h3 { color: #2d5a27; margin-bottom: 15px; }
+
+        /* RODAPÉ */
+        footer { background: #222; color: white; padding: 40px 10%; text-align: center; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Olá, eu sou o Fred! 👋</h1>
-        <p>Este é o meu primeiro site hospedado no GitHub Pages. Estou aprendendo a programar e este é o meu começo no mundo do desenvolvimento web.</p>
-        
-        <a href="https://github.com/otalfredcarvalho" class="botao">Ver meu GitHub</a>
-    </div>
+    <header>
+        <div class="logo">MINHA MARCA</div>
+        <nav>
+            <a href="#" style="margin-right: 15px; text-decoration: none; color: #333;">Início</a>
+            <a href="#" style="text-decoration: none; color: #333;">Serviços</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Gestão de Resíduos Inteligente</h1> <p>Soluções personalizadas para coleta e reciclagem da sua empresa.</p> <a href="#" class="btn-contato">FALE CONOSCO</a>
+    </header>
+
+    <section class="servicos">
+        <h2>Nossos Diferenciais</h2>
+        <div class="grid-servicos">
+            <div class="card">
+                <h3>Logística Reversa</h3>
+                <p>Coleta de equipamentos eletrônicos e desmobilização empresarial.</p>
+            </div>
+            <div class="card">
+                <h3>Conformidade</h3>
+                <p>Seguimos rigorosamente as leis e regulamentações ambientais.</p>
+            </div>
+            <div class="card">
+                <h3>Atendimento Ágil</h3>
+                <p>Suporte dedicado para garantir agilidade no seu processo.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Meu Treino de Site - Baseado em MG Recicla</p>
+        <p>Contato: (31) 9999-9999</p>
+    </footer>
 
 </body>
 </html>
